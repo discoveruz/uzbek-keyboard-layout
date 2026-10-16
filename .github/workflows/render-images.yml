@@ -1,0 +1,55 @@
+# Renders the README pictures in docs/images on Windows and commits them if they changed.
+# Run it from the Actions tab (Render images > Run workflow) after changing a .klc file or the setup program's text.
+name: Render images
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      # The setup window is larger than the runner's default 1024x768 screen, and Windows shrinks
+      # windows that don't fit, which would change the pictures.
+      - name: Enlarge screen
+        run: Set-DisplayResolution -Width 1920 -Height 1080 -Force
+
+      - name: Build setup program
+        run: dotnet build installer\UzbekKeyboardSetup.csproj -c Release --nologo -v minimal
+
+      - name: Render images
+        run: |
+          Add-Type -AssemblyName System.Drawing
+          function Get-ImageSizes {
+              Get-ChildItem docs\images\*.png | ForEach-Object {
+                  $image = [System.Drawing.Image]::FromFile($_.FullName)
+                  "$($_.Name) $($image.Width)x$($image.Height)"
+                  $image.Dispose()
+              }
+          }
+          $before = Get-ImageSizes
+          $exe = Resolve-Path installer\bin\Release\net48\UzbekKeyboardSetup.exe
+          $images = Join-Path $PWD docs\images
+          $run = Start-Process $exe -ArgumentList '--render-images', "`"$images`"" -WorkingDirectory $PWD -Wait -PassThru
+          if ($run.ExitCode -ne 0) { throw "Rendering stopped with exit code $($run.ExitCode)." }
+          $after = Get-ImageSizes
+          if (Compare-Object $before $after) {
+              Write-Host "Before:`n$($before -join "`n")`nAfter:`n$($after -join "`n")"
+              throw 'The pictures changed size. If the window size was changed on purpose, render them on a Windows PC instead.'
+          }
+
+      - name: Commit images
+        run: |
+          git add docs/images
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) { Write-Host 'The pictures are already up to date.'; exit 0 }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898283+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Render images'
+          git push

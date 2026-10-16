@@ -130,7 +130,8 @@ To change a layout, edit its `.klc` file in MSKLC, use **Project → Validate La
 | `Uzbek-Latin-2026-Classic.klc`<br>`Uzbek-Latin-2026-Direct.klc`<br>`Uzbek-Latin-2026-Turkish-style.klc` | The three layouts, in MSKLC's source format (UTF-16) |
 | `installer/` | The setup program (C#, Windows Forms, .NET Framework 4.8) |
 | `build-installer.ps1` | Packs the MSKLC packages into the setup program and builds it |
-| `docs/images/` | The pictures in this README. Regenerate them with `installer\bin\Release\net48\UzbekKeyboardSetup.exe --render-images docs\images` |
+| `docs/images/` | The pictures in this README. Regenerate them with `installer\bin\Release\net48\UzbekKeyboardSetup.exe --render-images docs\images`, or without Windows by running the *Render images* workflow in the Actions tab |
+| `.github/workflows/render-images.yml` | That workflow: renders the pictures on a GitHub Windows machine and commits them |
 
 ## License
 
