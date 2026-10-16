@@ -8,3 +8,8 @@ dist/
 
 .vs/
 *.user
+
+# Mac build output (build-mac-installer.sh)
+build/
+mac/.build/
+mac/.swiftpm/

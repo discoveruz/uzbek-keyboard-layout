@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Installer settings for dist/UzbekKeyboardSetup.pkg; build-mac-installer.sh passes this to productbuild. -->
+<installer-gui-script minSpecVersion="2">
+    <title>Uzbek Latin 2026 Keyboard</title>
+    <welcome file="welcome.html" mime-type="text/html"/>
+    <conclusion file="conclusion.html" mime-type="text/html"/>
+    <!-- Listing arm64 keeps Apple silicon Macs from asking to install Rosetta first. -->
+    <options customize="never" require-scripts="false" hostArchitectures="x86_64,arm64"/>
+    <domains enable_localSystem="true" enable_currentUserHome="false" enable_anywhere="false"/>
+    <choices-outline>
+        <line choice="layouts"/>
+    </choices-outline>
+    <choice id="layouts" title="Uzbek Latin 2026 keyboard layouts">
+        <pkg-ref id="io.github.discoveruz.keyboardlayout.uzbek-latin-2026"/>
+    </choice>
+    <pkg-ref id="io.github.discoveruz.keyboardlayout.uzbek-latin-2026">#UzbekLatin2026.pkg</pkg-ref>
+</installer-gui-script>

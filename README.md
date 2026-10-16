@@ -1,8 +1,8 @@
 # Uzbek Latin 2026 Keyboard
 
-Windows uchun oʻzbek lotin 2026 klaviaturalari · Uzbek Latin 2026 keyboard layouts for Windows
+Windows va Mac uchun oʻzbek lotin 2026 klaviaturalari · Uzbek Latin 2026 keyboard layouts for Windows and Mac
 
-**Yuklab olish / Download: [UzbekKeyboardSetup.exe](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.exe)**
+**Yuklab olish / Download:** Windows: **[UzbekKeyboardSetup.exe](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.exe)** · Mac: **[UzbekKeyboardSetup.pkg](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.pkg)**
 
 [Oʻzbekcha](#uzbek) · [English](#english)
 
@@ -12,7 +12,7 @@ Windows uchun oʻzbek lotin 2026 klaviaturalari · Uzbek Latin 2026 keyboard lay
 
 ## Oʻzbekcha
 
-Bu loyihada Windows uchun uchta klaviatura va ularni oʻrnatadigan dastur bor. Uchalasi ham 2026-yilgi oʻzbek lotin alifbosidagi **ö, ş, ğ, ç** harflarini hamda **ʼ** (tutuq belgisi) va **ʻ** belgilarini yozadi. Farqi faqat shu harflar qaysi tugmalarda turganida.
+Bu loyihada Windows va Mac uchun uchta klaviatura hamda ularni oʻrnatadigan dasturlar bor. Uchalasi ham 2026-yilgi oʻzbek lotin alifbosidagi **ö, ş, ğ, ç** harflarini hamda **ʼ** (tutuq belgisi) va **ʻ** belgilarini yozadi. Farqi faqat shu harflar qaysi tugmalarda turganida.
 
 ### Uchta klaviatura
 
@@ -53,7 +53,13 @@ Bosh harf uchun <kbd>Shift</kbd> qoʻshing.
 
 Tugmadan joy boʻshatgan eski belgi (masalan <kbd>[</kbd>, <kbd>;</kbd>, <kbd>'</kbd>) oʻsha tugmaning oʻzida <kbd>AltGr</kbd> bilan yoziladi.
 
+#### Macda
+
+Macda klaviaturalar xuddi shunday, faqat <kbd>AltGr</kbd> oʻrniga <kbd>Option</kbd> (⌥) ni bosasiz: chapdagisini ham, oʻngdagisini ham. Oʻzbek harflari egallamagan tugmalarda <kbd>Option</kbd> odatdagidek ishlaydi: – — … € kabi belgilar va é ü ñ kabi urgʻuli harflar Macning U.S. klaviaturasidagidek yoziladi. <kbd>⌘</kbd> bilan bosiladigan buyruqlar US klaviaturadagi joyida qoladi: masalan, Toʻgʻridan-toʻgʻri klaviaturada <kbd>C</kbd> tugmasi ç yozsa ham, <kbd>⌘</kbd>+<kbd>C</kbd> nusxa oladi.
+
 ### Oʻrnatish
+
+#### Windows
 
 1. **[UzbekKeyboardSetup.exe](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.exe)** faylini yuklab oling.
 2. Faylni oching. *Windows protected your PC* oynasi chiqsa, **More info**, keyin **Run anyway** ni bosing. Dastur raqamli imzoga ega boʻlmagani uchun Windows shunday ogohlantiradi.
@@ -63,21 +69,40 @@ Tugmadan joy boʻshatgan eski belgi (masalan <kbd>[</kbd>, <kbd>;</kbd>, <kbd>'<
 
 Bir nechta klaviaturani oʻrnatib, ular orasida <kbd>Win</kbd>+<kbd>Space</kbd> bilan almashib turish mumkin.
 
+#### Mac
+
+1. **[UzbekKeyboardSetup.pkg](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.pkg)** faylini yuklab oling.
+2. Faylni oching. macOS uni ochmasa, **Done** (yoki **OK**) ni bosing, keyin **System Settings → Privacy & Security** ni ochib, pastroqdagi **Open Anyway** ni, soʻng **Open** ni bosing. Dastur raqamli imzoga ega boʻlmagani uchun macOS shunday ogohlantiradi.
+3. **Continue**, keyin **Install** ni bosing va Mac parolingizni kiriting. Uchala klaviatura ham oʻrnatiladi.
+4. Tizimdan chiqib, qayta kiring (**Apple menu → Log Out**). Shundan keyingina macOS yangi klaviaturalarni koʻradi.
+5. **System Settings → Keyboard** ni oching. **Text Input** boʻlimida **Input Sources** yonidagi **Edit…** ni bosing. Pastdagi **+** ni bosing, **Uzbek** ni tanlang, **Uzbek Latin 2026 (…)** dan birini tanlab, **Add** ni bosing.
+6. Klaviaturalar orasida <kbd>🌐</kbd> (<kbd>fn</kbd>) yoki <kbd>Control</kbd>+<kbd>Space</kbd> bilan almashasiz.
+
 ### Oʻchirish
 
-Oʻrnatish dasturini qayta oching, klaviaturani tanlang va **Oʻchirish** ni bosing. Yoki Windowsda: **Sozlamalar → Ilovalar → Oʻrnatilgan ilovalar → Uzbek Latin 2026 (…) → Oʻchirish**.
+**Windows:** oʻrnatish dasturini qayta oching, klaviaturani tanlang va **Oʻchirish** ni bosing. Yoki Windowsda: **Sozlamalar → Ilovalar → Oʻrnatilgan ilovalar → Uzbek Latin 2026 (…) → Oʻchirish**.
+
+**Mac:** **System Settings → Keyboard → Text Input → Edit…** da klaviaturani tanlab, **−** ni bosing. Keyin Finderda **Go → Go to Folder…** ni bosing, `/Library/Keyboard Layouts` ni kiriting va **Uzbek Latin 2026.bundle** ni **Trash** ga tashlang. Tizimdan chiqib, qayta kiring.
 
 ### Talablar
 
+**Windows:**
+
 - Windows 10 yoki 11.
 - Intel yoki AMD protsessorli kompyuter. ARM protsessorli kompyuterlarga (masalan, Snapdragon) oʻrnatilmaydi, chunki MSKLC ular uchun klaviatura yarata olmaydi.
+- Boshqa hech narsa oʻrnatish shart emas.
+
+**Mac:**
+
+- macOS 11 yoki yangiroq (macOS 26 da sinab koʻrilgan).
+- Intel yoki Apple silicon (M1 va yangiroq) protsessorli istalgan Mac.
 - Boshqa hech narsa oʻrnatish shart emas.
 
 <a id="english"></a>
 
 ## English
 
-This project has three Windows keyboard layouts and a setup program that installs them. All three type the Uzbek Latin 2026 letters **ö, ş, ğ, ç** and the **ʼ** (tutuq belgisi) and **ʻ** signs. They differ only in which keys those letters are on.
+This project has three keyboard layouts for Windows and Mac, and an installer for each system. All three type the Uzbek Latin 2026 letters **ö, ş, ğ, ç** and the **ʼ** (tutuq belgisi) and **ʻ** signs. They differ only in which keys those letters are on.
 
 ![Setup window in English](docs/images/installer-en.png)
 
@@ -91,7 +116,13 @@ How to read the pictures: each key shows what it types alone (bottom left), with
 
 See the pictures and the table in the Uzbek section above. The table columns are Classic, Direct and Turkish-style. Hold <kbd>Shift</kbd> for capitals. A symbol that gave up its key to a letter, such as <kbd>[</kbd>, <kbd>;</kbd> or <kbd>'</kbd>, is still on that key with <kbd>AltGr</kbd>.
 
+#### On a Mac
+
+The layouts are the same on a Mac, but you press <kbd>Option</kbd> (⌥) where the pictures say <kbd>AltGr</kbd>; either Option key works. On keys the Uzbek letters don't use, <kbd>Option</kbd> works as usual: symbols such as – — … € and accented letters such as é ü ñ type as on the Mac's U.S. layout. Shortcuts with <kbd>⌘</kbd> stay where they are on a US keyboard: on Direct, for example, the <kbd>C</kbd> key types ç, but <kbd>⌘</kbd>+<kbd>C</kbd> still copies.
+
 ### How to install
+
+#### Windows
 
 1. Download **[UzbekKeyboardSetup.exe](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.exe)**.
 2. Open it. If *Windows protected your PC* appears, click **More info**, then **Run anyway**. Windows shows this because the program isn't digitally signed.
@@ -101,17 +132,38 @@ See the pictures and the table in the Uzbek section above. The table columns are
 
 You can install more than one layout and switch between them with <kbd>Win</kbd>+<kbd>Space</kbd>.
 
+#### Mac
+
+1. Download **[UzbekKeyboardSetup.pkg](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.pkg)**.
+2. Open it. If macOS won't open it, click **Done** (or **OK**), open **System Settings → Privacy & Security**, scroll down and click **Open Anyway**, then **Open**. macOS shows this because the package isn't digitally signed.
+3. Click **Continue**, then **Install**, and enter your Mac password. All three layouts are installed.
+4. Log out and back in (**Apple menu → Log Out**). macOS only finds new layouts after that.
+5. Open **System Settings → Keyboard**. Under **Text Input**, click **Edit…** next to **Input Sources**. Click **+** at the bottom, choose **Uzbek**, pick one of the **Uzbek Latin 2026 (…)** layouts and click **Add**.
+6. Switch between keyboards with <kbd>🌐</kbd> (<kbd>fn</kbd>) or <kbd>Control</kbd>+<kbd>Space</kbd>.
+
 ### How to remove
 
-Open the setup program again, pick the layout and click **Remove**. Or in Windows: **Settings → Apps → Installed apps → Uzbek Latin 2026 (…) → Uninstall**.
+**Windows:** open the setup program again, pick the layout and click **Remove**. Or in Windows: **Settings → Apps → Installed apps → Uzbek Latin 2026 (…) → Uninstall**.
+
+**Mac:** in **System Settings → Keyboard → Text Input → Edit…**, select the layout and click **−**. Then in Finder choose **Go → Go to Folder…**, enter `/Library/Keyboard Layouts` and move **Uzbek Latin 2026.bundle** to the **Trash**. Log out and back in.
 
 ### Requirements
+
+**Windows:**
 
 - Windows 10 or 11.
 - A PC with an Intel or AMD processor. PCs with ARM processors (such as Snapdragon) aren't supported, because MSKLC can't build keyboards for them.
 - Nothing else to install.
 
+**Mac:**
+
+- macOS 11 or later (tested on macOS 26).
+- Any Mac with an Intel or Apple silicon (M1 or later) processor.
+- Nothing else to install.
+
 ## Build from source
+
+### Windows
 
 You need:
 
@@ -125,11 +177,22 @@ Steps:
 
 To change a layout, edit its `.klc` file in MSKLC, use **Project → Validate Layout**, then repeat the two steps. The pictures in the setup program are read from the `.klc` files, so they update on their own.
 
+### Mac
+
+You need a Mac with Xcode or the Command Line Tools (`xcode-select --install`).
+
+Run `./build-mac-installer.sh`. It tests the layout rules, generates the Mac layouts from the three `.klc` files and builds `dist/UzbekKeyboardSetup.pkg`. Each Mac layout is Apple's U.S. layout with the `.klc`'s keys on top, so there is no separate Mac file to edit: after changing a `.klc`, run the script again. After installing the package and logging out and back in, `swift run --package-path mac keylayouts verify` checks every key of the installed layouts against the `.klc` files.
+
+Attach both `UzbekKeyboardSetup.exe` and `UzbekKeyboardSetup.pkg` to every release, so both download links keep working.
+
 | Path | What it is |
 |---|---|
 | `Uzbek-Latin-2026-Classic.klc`<br>`Uzbek-Latin-2026-Direct.klc`<br>`Uzbek-Latin-2026-Turkish-style.klc` | The three layouts, in MSKLC's source format (UTF-16) |
 | `installer/` | The setup program (C#, Windows Forms, .NET Framework 4.8) |
 | `build-installer.ps1` | Packs the MSKLC packages into the setup program and builds it |
+| `mac/` | Generates the Mac layouts from the `.klc` files (Swift); `swift test --package-path mac` runs its tests |
+| `mac/installer/` | The Mac installer's settings and its welcome and closing pages |
+| `build-mac-installer.sh` | Builds the Mac installer |
 | `docs/images/` | The pictures in this README. Regenerate them with `installer\bin\Release\net48\UzbekKeyboardSetup.exe --render-images docs\images`, or without Windows by running the *Render images* workflow in the Actions tab |
 | `.github/workflows/render-images.yml` | That workflow: renders the pictures on a GitHub Windows machine and commits them |
 
