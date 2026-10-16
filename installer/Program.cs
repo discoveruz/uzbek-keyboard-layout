@@ -30,7 +30,7 @@ static class Program
         Directory.CreateDirectory(folder);
         using var form = new SetupForm { StartPosition = FormStartPosition.Manual, Location = new Point(-20000, -20000), ShowInTaskbar = false };
         form.Show();
-        form.ShowAsNotInstalled();
+        form.ShowForPictures();
 
         // The whole window, in each language, with Direct selected.
         var direct = Catalog.All.First(layout => layout.Kbd == "uzlt26d");

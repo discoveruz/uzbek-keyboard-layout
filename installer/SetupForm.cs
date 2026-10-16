@@ -22,6 +22,7 @@ sealed class SetupForm : Form
     Strings text = Strings.Uzbek;
     KeyboardLayout selected;
     bool busy;
+    bool forPictures;
 
     // The last status message, kept as a function of the language so it can be re-translated.
     Func<Strings, string> statusMessage;
@@ -159,9 +160,13 @@ sealed class SetupForm : Form
     /// <summary>Shows a layout as if its card had been clicked.</summary>
     public void ShowLayout(KeyboardLayout layout) => Choose(layout);
 
-    /// <summary>For README pictures: shows every layout as not installed, whatever this PC has.</summary>
-    public void ShowAsNotInstalled()
+    /// <summary>
+    /// For README pictures: shows the window as a release build looks on a supported PC with nothing installed,
+    /// whatever this PC has and even if this build has no MSKLC packages in it.
+    /// </summary>
+    public void ShowForPictures()
     {
+        forPictures = true;
         foreach (var card in cards)
             card.ProductCode = null;
         UpdateActions();
@@ -218,8 +223,8 @@ sealed class SetupForm : Form
     void UpdateActions(Func<Strings, string> message = null, Color? color = null)
     {
         bool installed = SelectedCard.Installed;
-        bool hasPackage = Setup.HasPackage(selected);
-        bool supported = Setup.Machine != MachineKind.Arm64;
+        bool hasPackage = forPictures || Setup.HasPackage(selected);
+        bool supported = forPictures || Setup.Machine != MachineKind.Arm64;
         string title = text.Title(selected);
 
         installButton.Text = installed ? text.InstalledButton : text.InstallButton(title);
