@@ -276,7 +276,7 @@ sealed class LegendView : Control
         }
         x = Item(g, x + S(26), mid, text.LegendChanged) + S(28);
 
-        // AltGr is the right Alt key.
+        // AltGr is the right Alt key, or Ctrl + Alt.
         using (var swatch = Shapes.RoundRect(new Rectangle(x, mid - S(9), S(18), S(18)), S(4)))
         using (var pen = new Pen(Theme.Accent, S(2)))
             g.DrawPath(pen, swatch);

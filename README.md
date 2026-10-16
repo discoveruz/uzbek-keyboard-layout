@@ -16,7 +16,7 @@ Bu loyihada Windows uchun uchta klaviatura va ularni oʻrnatadigan dastur bor. U
 
 ### Uchta klaviatura
 
-Rasmlarni qanday oʻqish kerak: har bir tugmaning chap pastida tugmaning oʻzi, chap yuqorisida <kbd>Shift</kbd> bilan, oʻng pastida <kbd>AltGr</kbd> bilan, oʻng yuqorisida <kbd>AltGr</kbd>+<kbd>Shift</kbd> bilan yoziladigan belgi. <kbd>AltGr</kbd> — oʻngdagi <kbd>Alt</kbd> tugmasi. Moviy rangdagi tugmalar oddiy US klaviaturadan farq qiladi.
+Rasmlarni qanday oʻqish kerak: har bir tugmaning chap pastida tugmaning oʻzi, chap yuqorisida <kbd>Shift</kbd> bilan, oʻng pastida <kbd>AltGr</kbd> bilan, oʻng yuqorisida <kbd>AltGr</kbd>+<kbd>Shift</kbd> bilan yoziladigan belgi. <kbd>AltGr</kbd> — oʻngdagi <kbd>Alt</kbd> tugmasi. Klaviaturangizda oʻngdagi <kbd>Alt</kbd> boʻlmasa, <kbd>AltGr</kbd> oʻrniga <kbd>Ctrl</kbd>+<kbd>Alt</kbd> ni bosing. Moviy rangdagi tugmalar oddiy US klaviaturadan farq qiladi.
 
 #### Klassik · Uzbek Latin 2026 (Classic)
 
@@ -83,7 +83,7 @@ This project has three Windows keyboard layouts and a setup program that install
 
 ### The three layouts
 
-How to read the pictures: each key shows what it types alone (bottom left), with <kbd>Shift</kbd> (top left), with <kbd>AltGr</kbd> (bottom right) and with <kbd>AltGr</kbd>+<kbd>Shift</kbd> (top right). <kbd>AltGr</kbd> is the right <kbd>Alt</kbd> key. Blue keys type something different from a US keyboard.
+How to read the pictures: each key shows what it types alone (bottom left), with <kbd>Shift</kbd> (top left), with <kbd>AltGr</kbd> (bottom right) and with <kbd>AltGr</kbd>+<kbd>Shift</kbd> (top right). <kbd>AltGr</kbd> is the right <kbd>Alt</kbd> key. If your keyboard has no right <kbd>Alt</kbd>, press <kbd>Ctrl</kbd>+<kbd>Alt</kbd> instead of <kbd>AltGr</kbd>. Blue keys type something different from a US keyboard.
 
 - **Classic**, shown in Windows as *Uzbek Latin 2026 (Classic)*: every key stays where it is on a US keyboard, and you type the Uzbek letters with <kbd>AltGr</kbd>.
 - **Direct**, shown as *Uzbek Latin 2026 (Direct)*: ö ş ğ ç have their own keys, so no <kbd>AltGr</kbd> is needed. ç is on <kbd>C</kbd>, and plain c is <kbd>AltGr</kbd>+<kbd>C</kbd>.
