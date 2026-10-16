@@ -1,0 +1,2 @@
+# MSKLC reads and writes .klc files as UTF-16 with CRLF line endings; keep them byte for byte.
+*.klc -text

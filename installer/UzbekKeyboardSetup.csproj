@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- .NET Framework 4.8 ships with Windows 10 and 11, so the .exe runs without installing anything. -->
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AssemblyName>UzbekKeyboardSetup</AssemblyName>
+    <RootNamespace>UzbekKeyboardSetup</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Product>Uzbek Latin 2026 Keyboard</Product>
+    <AssemblyTitle>Uzbek Latin 2026 Keyboard Setup</AssemblyTitle>
+    <Copyright>(c) 2026</Copyright>
+    <Version>1.0.0</Version>
+    <DebugType>none</DebugType>
+    <GenerateSupportedRuntime>false</GenerateSupportedRuntime>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The key tables are read from the .klc files at run time, so the preview always matches the layouts. -->
+    <EmbeddedResource Include="..\*.klc" LogicalName="klc/%(Filename)%(Extension)" />
+    <!-- MSKLC setup packages, copied in by build-installer.ps1: packages\<kbd>\<kbd>_amd64.msi, amd64\<kbd>.dll, ... -->
+    <EmbeddedResource Include="packages\**\*" LogicalName="pkg/%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>

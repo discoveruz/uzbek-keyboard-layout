@@ -1,0 +1,10 @@
+# Build output
+installer/bin/
+installer/obj/
+# MSKLC packages copied in by build-installer.ps1
+installer/packages/
+# The finished installer is published on the Releases page, not committed
+dist/
+
+.vs/
+*.user
