@@ -49,7 +49,7 @@ Bosh harf uchun <kbd>Shift</kbd> qoʻshing.
 | ʼ | <kbd>AltGr</kbd>+<kbd>'</kbd> | <kbd>AltGr</kbd>+<kbd>]</kbd> | <kbd>AltGr</kbd>+<kbd>]</kbd> |
 | ʻ | <kbd>AltGr</kbd>+<kbd>Shift</kbd>+<kbd>'</kbd> | <kbd>AltGr</kbd>+<kbd>Shift</kbd>+<kbd>]</kbd> | <kbd>AltGr</kbd>+<kbd>Shift</kbd>+<kbd>]</kbd> |
 | c | <kbd>C</kbd> | <kbd>AltGr</kbd>+<kbd>C</kbd> | <kbd>C</kbd> |
-| , (vergul) | <kbd>,</kbd> | <kbd>,</kbd> | <kbd>\\</kbd> |
+| , (vergul) | <kbd>,</kbd> | <kbd>,</kbd> | <kbd>\\</kbd> yoki / or <kbd>AltGr</kbd>+<kbd>,</kbd> |
 
 Tugmadan joy boʻshatgan eski belgi (masalan <kbd>[</kbd>, <kbd>;</kbd>, <kbd>'</kbd>) oʻsha tugmaning oʻzida <kbd>AltGr</kbd> bilan yoziladi.
 
