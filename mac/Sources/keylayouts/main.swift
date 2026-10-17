@@ -4,6 +4,7 @@ import UzbekKeyboardMac
 let usage = """
     usage: keylayouts bundle --version <x.y.z> <output folder>
            keylayouts pictures <output folder>
+           keylayouts readme-pictures <output folder>
            keylayouts app-icon <output.icns>
            keylayouts verify
     Run it in the folder with the .klc files (the repo root).
@@ -21,6 +22,10 @@ do {
     case "pictures" where arguments.count == 2:
         try MacLayouts.writePictures(klcFolder: klcFolder, to: URL(fileURLWithPath: arguments[1]))
         print("Wrote the layout pictures to \(arguments[1])")
+    case "readme-pictures" where arguments.count == 2:
+        // README size, named next to the Windows pictures in docs/images.
+        try MacLayouts.writePictures(klcFolder: klcFolder, to: URL(fileURLWithPath: arguments[1]), scale: 1, prefix: "mac-layout-")
+        print("Wrote the README layout pictures to \(arguments[1])")
     case "app-icon" where arguments.count == 2:
         try Icon.icns(sizes: Icon.appSizes).write(to: URL(fileURLWithPath: arguments[1]))
         print("Wrote \(arguments[1])")

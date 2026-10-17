@@ -10,8 +10,14 @@ struct SetupApp: App {
 
     init() {
         // Run as FreshInputSources' helper: print the enabled layouts and quit, without a window.
-        if CommandLine.arguments.dropFirst().first == FreshInputSources.flag {
+        let arguments = Array(CommandLine.arguments.dropFirst())
+        if arguments.first == FreshInputSources.flag {
             print(SystemInputSources().enabledLayouts(bundleID: BundleWriter.identifier).sorted().joined(separator: "\n"))
+            exit(0)
+        }
+        // Developer aid, like the Windows setup's: saves the README pictures of the window instead of opening it.
+        if arguments.count == 2, arguments[0] == "--render-images" {
+            MainActor.assumeIsolated { renderImages(to: URL(fileURLWithPath: arguments[1])) }
             exit(0)
         }
     }
@@ -66,11 +72,13 @@ final class SetupModel: ObservableObject {
     let installer: LayoutInstaller?
     private var observer: NSObjectProtocol?
 
-    init() {
+    /// `checkInstalled: false` shows no Installed badges, for the README pictures.
+    init(checkInstalled: Bool = true) {
         installer = Bundle.main.url(forResource: "Uzbek Latin 2026", withExtension: "bundle").map { [sources] bundle in
             LayoutInstaller(bundle: bundle, folder: LayoutInstaller.forCurrentUser(bundle: bundle).folder,
                             systemFolder: URL(fileURLWithPath: "/Library/Keyboard Layouts"), sources: sources)
         }
+        guard checkInstalled else { return }
         refresh()
         // macOS announces it when layouts are turned off, in System Settings or the input menu.
         observer = DistributedNotificationCenter.default().addObserver(
@@ -328,5 +336,32 @@ final class FreshInputSources: InputSources, @unchecked Sendable {
 
     func enabledLayouts(bundleID: String) -> Set<String> {
         MainActor.assumeIsolated { enabled }
+    }
+}
+
+/// Draws the window in each language, in light mode with Direct selected, as mac-setup-uz.png and mac-setup-en.png.
+@MainActor
+func renderImages(to folder: URL) {
+    _ = NSApplication.shared
+    try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+    for (language, file) in [(Strings.uzbek, "mac-setup-uz.png"), (Strings.english, "mac-setup-en.png")] {
+        let model = SetupModel(checkInstalled: false)
+        model.text = language
+        let size = NSSize(width: 1100, height: 780)
+        // Drawn as the active window, so the Install button and the language switch keep their colors.
+        let view = NSHostingView(rootView: SetupView(model: model).frame(width: size.width, height: size.height)
+            .environment(\.controlActiveState, .key))
+        let window = NSWindow(contentRect: NSRect(origin: .zero, size: size), styleMask: [.borderless], backing: .buffered, defer: false)
+        window.appearance = NSAppearance(named: .aqua)
+        window.backgroundColor = .windowBackgroundColor
+        window.contentView = view
+        view.layoutSubtreeIfNeeded()
+        // One pixel per point keeps the files about the size of the Windows pictures.
+        guard let bitmap = NSBitmapImageRep(bitmapDataPlanes: nil, pixelsWide: Int(size.width), pixelsHigh: Int(size.height),
+                                            bitsPerSample: 8, samplesPerPixel: 4, hasAlpha: true, isPlanar: false,
+                                            colorSpaceName: .deviceRGB, bytesPerRow: 0, bitsPerPixel: 0) else { continue }
+        bitmap.size = size
+        view.cacheDisplay(in: view.bounds, to: bitmap)
+        try? bitmap.representation(using: .png, properties: [:])?.write(to: folder.appendingPathComponent(file))
     }
 }

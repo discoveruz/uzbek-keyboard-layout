@@ -57,6 +57,20 @@ Tugmadan joy boʻshatgan eski belgi (masalan <kbd>[</kbd>, <kbd>;</kbd>, <kbd>'<
 
 Macda klaviaturalar xuddi shunday, faqat <kbd>AltGr</kbd> oʻrniga <kbd>Option</kbd> (⌥) ni bosasiz: chapdagisini ham, oʻngdagisini ham. Oʻzbek harflari egallamagan tugmalarda <kbd>Option</kbd> odatdagidek ishlaydi: – — … € kabi belgilar va é ü ñ kabi urgʻuli harflar Macning U.S. klaviaturasidagidek yoziladi. <kbd>⌘</kbd> bilan bosiladigan buyruqlar US klaviaturadagi joyida qoladi: masalan, Toʻgʻridan-toʻgʻri klaviaturada <kbd>C</kbd> tugmasi ç yozsa ham, <kbd>⌘</kbd>+<kbd>C</kbd> nusxa oladi.
 
+Mac klaviaturasida uchala klaviatura shunday koʻrinadi. Bu yerda tugmaning oʻng tomonida faqat oʻzbek klaviaturasi <kbd>Option</kbd> ga qoʻygan belgilar koʻrsatilgan.
+
+**Klassik**
+
+![Klassik klaviatura, Mac](docs/images/mac-layout-classic.png)
+
+**Toʻgʻridan-toʻgʻri**
+
+![Toʻgʻridan-toʻgʻri klaviatura, Mac](docs/images/mac-layout-direct.png)
+
+**Turkcha uslub**
+
+![Turkcha uslub klaviatura, Mac](docs/images/mac-layout-turkish-style.png)
+
 ### Oʻrnatish
 
 #### Windows
@@ -70,6 +84,8 @@ Macda klaviaturalar xuddi shunday, faqat <kbd>AltGr</kbd> oʻrniga <kbd>Option</
 Bir nechta klaviaturani oʻrnatib, ular orasida <kbd>Win</kbd>+<kbd>Space</kbd> bilan almashib turish mumkin.
 
 #### Mac
+
+![Mac uchun oʻrnatish dasturi](docs/images/mac-setup-uz.png)
 
 1. **[UzbekKeyboardSetup.zip](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.zip)** faylini yuklab oling va oching. Undan **UzbekKeyboardSetup** dasturi chiqadi.
 2. Dasturni oching. macOS uni ochmasa, **Done** (yoki **OK**) ni bosing, keyin **System Settings → Privacy & Security** ni ochib, pastroqdagi **Open Anyway** ni, soʻng **Open** ni bosing. Dastur raqamli imzoga ega boʻlmagani uchun macOS shunday ogohlantiradi.
@@ -118,7 +134,7 @@ See the pictures and the table in the Uzbek section above. The table columns are
 
 #### On a Mac
 
-The layouts are the same on a Mac, but you press <kbd>Option</kbd> (⌥) where the pictures say <kbd>AltGr</kbd>; either Option key works. On keys the Uzbek letters don't use, <kbd>Option</kbd> works as usual: symbols such as – — … € and accented letters such as é ü ñ type as on the Mac's U.S. layout. Shortcuts with <kbd>⌘</kbd> stay where they are on a US keyboard: on Direct, for example, the <kbd>C</kbd> key types ç, but <kbd>⌘</kbd>+<kbd>C</kbd> still copies.
+The layouts are the same on a Mac, but you press <kbd>Option</kbd> (⌥) where the pictures say <kbd>AltGr</kbd>; either Option key works. On keys the Uzbek letters don't use, <kbd>Option</kbd> works as usual: symbols such as – — … € and accented letters such as é ü ñ type as on the Mac's U.S. layout. Shortcuts with <kbd>⌘</kbd> stay where they are on a US keyboard: on Direct, for example, the <kbd>C</kbd> key types ç, but <kbd>⌘</kbd>+<kbd>C</kbd> still copies. The Uzbek section above also has pictures of the three layouts on a Mac keyboard.
 
 ### How to install
 
@@ -133,6 +149,8 @@ The layouts are the same on a Mac, but you press <kbd>Option</kbd> (⌥) where t
 You can install more than one layout and switch between them with <kbd>Win</kbd>+<kbd>Space</kbd>.
 
 #### Mac
+
+![Mac setup app in English](docs/images/mac-setup-en.png)
 
 1. Download **[UzbekKeyboardSetup.zip](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.zip)** and open it. It unpacks into the **UzbekKeyboardSetup** app.
 2. Open the app. If macOS won't open it, click **Done** (or **OK**), open **System Settings → Privacy & Security**, scroll down and click **Open Anyway**, then **Open**. macOS shows this because the app isn't digitally signed.
@@ -192,7 +210,7 @@ Attach both `UzbekKeyboardSetup.exe` and `UzbekKeyboardSetup.zip` to every relea
 | `build-installer.ps1` | Packs the MSKLC packages into the setup program and builds it |
 | `mac/` | The Mac side (Swift): generates the layouts and their pictures from the `.klc` files, and the setup app (`mac/Sources/UzbekKeyboardSetup`); `swift test --package-path mac` runs its tests |
 | `build-mac-installer.sh` | Builds the Mac setup app and zips it |
-| `docs/images/` | The pictures in this README. Regenerate them with `installer\bin\Release\net48\UzbekKeyboardSetup.exe --render-images docs\images`, or without Windows by running the *Render images* workflow in the Actions tab |
+| `docs/images/` | The pictures in this README. Regenerate the Windows ones with `installer\bin\Release\net48\UzbekKeyboardSetup.exe --render-images docs\images`, or without Windows by running the *Render images* workflow in the Actions tab. Regenerate the Mac ones (`mac-*.png`) on a Mac after `./build-mac-installer.sh`, with `swift run --package-path mac keylayouts readme-pictures docs/images` and `build/mac/UzbekKeyboardSetup.app/Contents/MacOS/UzbekKeyboardSetup --render-images docs/images` |
 | `.github/workflows/render-images.yml` | That workflow: renders the pictures on a GitHub Windows machine and commits them |
 
 ## License
