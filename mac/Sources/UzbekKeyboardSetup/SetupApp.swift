@@ -349,7 +349,10 @@ func renderImages(to folder: URL) {
         model.text = language
         let size = NSSize(width: 1100, height: 780)
         // Drawn as the active window, so the Install button and the language switch keep their colors.
+        // An opaque window background: offscreen, it would otherwise be transparent, and the dark text
+        // unreadable on GitHub's dark theme.
         let view = NSHostingView(rootView: SetupView(model: model).frame(width: size.width, height: size.height)
+            .background(Color(nsColor: .windowBackgroundColor))
             .environment(\.controlActiveState, .key))
         let window = NSWindow(contentRect: NSRect(origin: .zero, size: size), styleMask: [.borderless], backing: .buffered, defer: false)
         window.appearance = NSAppearance(named: .aqua)
