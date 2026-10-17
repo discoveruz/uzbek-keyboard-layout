@@ -201,6 +201,16 @@ You need a Mac with Xcode.
 
 Run `./build-mac-installer.sh`. It tests the layout rules, generates the Mac layouts and their pictures from the three `.klc` files, builds the setup app for Intel and Apple silicon, and zips it as `dist/UzbekKeyboardSetup.zip`. Each Mac layout is Apple's U.S. layout with the `.klc`'s keys on top, so there is no separate Mac file to edit: after changing a `.klc`, run the script again. After installing a layout with the app, `swift run --package-path mac keylayouts verify` checks every key of the installed layouts against the `.klc` files.
 
+### Linux
+
+You need Python 3, on a Mac or on Linux. The check also needs [Docker](https://docs.docker.com/get-docker/); on a Mac, for example, `brew install colima docker`, then `colima start`.
+
+Run `./build-linux-package.sh`. It tests the layout rules, generates the Linux layouts from the three `.klc` files as XKB files, and packs them with `linux/install.sh` as `dist/UzbekKeyboardLinux.tar.gz`. As on the Mac, each layout is the US layout with the `.klc`'s keys on top, so there is no separate Linux file to edit. A key that types something other than on US keeps its US character for <kbd>Ctrl</kbd>, so shortcuts such as <kbd>Ctrl</kbd>+<kbd>C</kbd> stay where they are on a US keyboard, as on Windows and Mac.
+
+`install.sh` installs the layouts without sudo into the person's own `~/.config/xkb`. Wayland sessions (GNOME, KDE Plasma and others) read that folder; X11 sessions don't. On GNOME it also adds the chosen layout to the input sources, and `./install.sh --remove` takes the layouts out again.
+
+`linux/check.sh` tests the package in Docker on Ubuntu 22.04, Ubuntu 24.04 and the latest Fedora. In each, it installs the layouts for a test user and uses libxkbcommon, the library these desktops build keyboards with, to check every key with every mix of <kbd>Shift</kbd>, <kbd>Caps Lock</kbd>, <kbd>AltGr</kbd> and <kbd>Ctrl</kbd> against the `.klc` files. On a Linux PC, after `install.sh`, run `python3 linux/xkblayouts.py verify` from the repo root for the same check.
+
 Attach both `UzbekKeyboardSetup.exe` and `UzbekKeyboardSetup.zip` to every release, so both download links keep working.
 
 | Path | What it is |
@@ -210,6 +220,8 @@ Attach both `UzbekKeyboardSetup.exe` and `UzbekKeyboardSetup.zip` to every relea
 | `build-installer.ps1` | Packs the MSKLC packages into the setup program and builds it |
 | `mac/` | The Mac side (Swift): generates the layouts and their pictures from the `.klc` files, and the setup app (`mac/Sources/UzbekKeyboardSetup`); `swift test --package-path mac` runs its tests |
 | `build-mac-installer.sh` | Builds the Mac setup app and zips it |
+| `linux/` | The Linux side (Python): `xkblayouts.py` generates the XKB layouts from the `.klc` files and checks installed ones, `install.sh` installs them, and `check.sh` runs that check in Docker; `python3 -m unittest discover -s linux/tests -t linux` runs its tests |
+| `build-linux-package.sh` | Builds the Linux package |
 | `docs/images/` | The pictures in this README. Regenerate the Windows ones with `installer\bin\Release\net48\UzbekKeyboardSetup.exe --render-images docs\images`, or without Windows by running the *Render images* workflow in the Actions tab. Regenerate the Mac ones (`mac-*.png`) on a Mac after `./build-mac-installer.sh`, with `swift run --package-path mac keylayouts readme-pictures docs/images` and `build/mac/UzbekKeyboardSetup.app/Contents/MacOS/UzbekKeyboardSetup --render-images docs/images` |
 | `.github/workflows/render-images.yml` | That workflow: renders the pictures on a GitHub Windows machine and commits them |
 

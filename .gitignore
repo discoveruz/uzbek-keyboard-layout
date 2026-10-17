@@ -13,3 +13,6 @@ dist/
 build/
 mac/.build/
 mac/.swiftpm/
+
+# Python's bytecode cache (linux/)
+__pycache__/
