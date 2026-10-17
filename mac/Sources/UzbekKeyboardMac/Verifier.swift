@@ -43,7 +43,7 @@ public enum Verifier {
             let klc = try MacLayouts.loadKlc(file, from: klcFolder)
             guard let match = installed.first(where: { $0.name == klc.name }) else {
                 passed = false
-                report.append("\(klc.name): not found. Install dist/UzbekKeyboardSetup.pkg, then log out and back in so macOS finds it.")
+                report.append("\(klc.name): not found. Install it with the setup app (build/mac/UzbekKeyboardSetup.app) first.")
                 continue
             }
             let layout = try SystemLayout(source: match.source)

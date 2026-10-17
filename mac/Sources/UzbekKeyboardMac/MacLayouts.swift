@@ -24,4 +24,21 @@ public enum MacLayouts {
         }
         return try KlcLayout(contentsOf: url)
     }
+
+    /// Writes a picture of each layout into `folder` as classic.png, direct.png and turkish-style.png,
+    /// three times the base size so they stay sharp in the setup app's window.
+    public static func writePictures(klcFolder: URL, to folder: URL) throws {
+        let us = try USLayout.load()
+        try FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+        for layout in all {
+            let klc = try loadKlc(layout.klc, from: klcFolder)
+            try KeyboardPicture.png(for: klc, us: us, scale: 3).write(to: folder.appendingPathComponent("\(pictureName(klc.name)).png"))
+        }
+    }
+
+    /// "Uzbek Latin 2026 (Turkish-style)" → "turkish-style".
+    static func pictureName(_ layoutName: String) -> String {
+        let variant = layoutName.split(separator: "(").last.map { $0.replacingOccurrences(of: ")", with: "") } ?? layoutName
+        return variant.lowercased()
+    }
 }

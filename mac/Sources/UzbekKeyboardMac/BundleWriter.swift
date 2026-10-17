@@ -1,6 +1,6 @@
 import Foundation
 
-/// Writes the layouts as one keyboard layout bundle, which goes in /Library/Keyboard Layouts.
+/// Writes the layouts as one keyboard layout bundle, which the setup app installs into ~/Library/Keyboard Layouts.
 public enum BundleWriter {
     public static let name = "Uzbek Latin 2026"
     public static let identifier = "io.github.discoveruz.keyboardlayout.uzbek-latin-2026"

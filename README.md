@@ -2,7 +2,7 @@
 
 Windows va Mac uchun oʻzbek lotin 2026 klaviaturalari · Uzbek Latin 2026 keyboard layouts for Windows and Mac
 
-**Yuklab olish / Download:** Windows: **[UzbekKeyboardSetup.exe](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.exe)** · Mac: **[UzbekKeyboardSetup.pkg](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.pkg)**
+**Yuklab olish / Download:** Windows: **[UzbekKeyboardSetup.exe](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.exe)** · Mac: **[UzbekKeyboardSetup.zip](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.zip)**
 
 [Oʻzbekcha](#uzbek) · [English](#english)
 
@@ -71,18 +71,18 @@ Bir nechta klaviaturani oʻrnatib, ular orasida <kbd>Win</kbd>+<kbd>Space</kbd> 
 
 #### Mac
 
-1. **[UzbekKeyboardSetup.pkg](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.pkg)** faylini yuklab oling.
-2. Faylni oching. macOS uni ochmasa, **Done** (yoki **OK**) ni bosing, keyin **System Settings → Privacy & Security** ni ochib, pastroqdagi **Open Anyway** ni, soʻng **Open** ni bosing. Dastur raqamli imzoga ega boʻlmagani uchun macOS shunday ogohlantiradi.
-3. **Continue**, keyin **Install** ni bosing va Mac parolingizni kiriting. Uchala klaviatura ham oʻrnatiladi.
-4. Tizimdan chiqib, qayta kiring (**Apple menu → Log Out**). Shundan keyingina macOS yangi klaviaturalarni koʻradi.
-5. **System Settings → Keyboard** ni oching. **Text Input** boʻlimida **Input Sources** yonidagi **Edit…** ni bosing. Pastdagi **+** ni bosing, **Uzbek** ni tanlang, **Uzbek Latin 2026 (…)** dan birini tanlab, **Add** ni bosing.
-6. Klaviaturalar orasida <kbd>🌐</kbd> (<kbd>fn</kbd>) yoki <kbd>Control</kbd>+<kbd>Space</kbd> bilan almashasiz.
+1. **[UzbekKeyboardSetup.zip](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.zip)** faylini yuklab oling va oching. Undan **UzbekKeyboardSetup** dasturi chiqadi.
+2. Dasturni oching. macOS uni ochmasa, **Done** (yoki **OK**) ni bosing, keyin **System Settings → Privacy & Security** ni ochib, pastroqdagi **Open Anyway** ni, soʻng **Open** ni bosing. Dastur raqamli imzoga ega boʻlmagani uchun macOS shunday ogohlantiradi.
+3. Oʻzingizga yoqqan klaviaturani tanlang va **Oʻrnatish** ni bosing. Parol soʻralmaydi va klaviatura darhol yoqiladi.
+4. Klaviaturalar orasida <kbd>🌐</kbd> (<kbd>fn</kbd>), <kbd>Control</kbd>+<kbd>Space</kbd> yoki menyu satridagi **UZ** belgisi bilan almashasiz.
+
+Klaviatura faqat sizning foydalanuvchi hisobingizga oʻrnatiladi. Macdagi boshqa hisoblar uchun dasturni oʻsha hisobda ham oching.
 
 ### Oʻchirish
 
 **Windows:** oʻrnatish dasturini qayta oching, klaviaturani tanlang va **Oʻchirish** ni bosing. Yoki Windowsda: **Sozlamalar → Ilovalar → Oʻrnatilgan ilovalar → Uzbek Latin 2026 (…) → Oʻchirish**.
 
-**Mac:** **System Settings → Keyboard → Text Input → Edit…** da klaviaturani tanlab, **−** ni bosing. Keyin Finderda **Go → Go to Folder…** ni bosing, `/Library/Keyboard Layouts` ni kiriting va **Uzbek Latin 2026.bundle** ni **Trash** ga tashlang. Tizimdan chiqib, qayta kiring.
+**Mac:** dasturni qayta oching, klaviaturani tanlang va **Oʻchirish** ni bosing. Dastur System Settings ni ochib, nimani bosish kerakligini koʻrsatadi: macOS bunday klaviaturalarni faqat u yerda olib tashlashga ruxsat beradi. Oxirgi oʻzbek klaviaturasi olib tashlangach, dastur fayllarni ham oʻchiradi.
 
 ### Talablar
 
@@ -94,7 +94,7 @@ Bir nechta klaviaturani oʻrnatib, ular orasida <kbd>Win</kbd>+<kbd>Space</kbd> 
 
 **Mac:**
 
-- macOS 11 yoki yangiroq (macOS 26 da sinab koʻrilgan).
+- macOS 13 (Ventura) yoki yangiroq (macOS 26 da sinab koʻrilgan).
 - Intel yoki Apple silicon (M1 va yangiroq) protsessorli istalgan Mac.
 - Boshqa hech narsa oʻrnatish shart emas.
 
@@ -134,18 +134,18 @@ You can install more than one layout and switch between them with <kbd>Win</kbd>
 
 #### Mac
 
-1. Download **[UzbekKeyboardSetup.pkg](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.pkg)**.
-2. Open it. If macOS won't open it, click **Done** (or **OK**), open **System Settings → Privacy & Security**, scroll down and click **Open Anyway**, then **Open**. macOS shows this because the package isn't digitally signed.
-3. Click **Continue**, then **Install**, and enter your Mac password. All three layouts are installed.
-4. Log out and back in (**Apple menu → Log Out**). macOS only finds new layouts after that.
-5. Open **System Settings → Keyboard**. Under **Text Input**, click **Edit…** next to **Input Sources**. Click **+** at the bottom, choose **Uzbek**, pick one of the **Uzbek Latin 2026 (…)** layouts and click **Add**.
-6. Switch between keyboards with <kbd>🌐</kbd> (<kbd>fn</kbd>) or <kbd>Control</kbd>+<kbd>Space</kbd>.
+1. Download **[UzbekKeyboardSetup.zip](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.zip)** and open it. It unpacks into the **UzbekKeyboardSetup** app.
+2. Open the app. If macOS won't open it, click **Done** (or **OK**), open **System Settings → Privacy & Security**, scroll down and click **Open Anyway**, then **Open**. macOS shows this because the app isn't digitally signed.
+3. Pick the layout you like and click **Install**. There's no password, and the layout is turned on right away. The window opens in Uzbek; use the switch in the top-right corner for English.
+4. Switch between keyboards with <kbd>🌐</kbd> (<kbd>fn</kbd>), <kbd>Control</kbd>+<kbd>Space</kbd> or the **UZ** icon in the menu bar.
+
+The layout is installed for your user account only. For another account on the same Mac, open the app in that account too.
 
 ### How to remove
 
 **Windows:** open the setup program again, pick the layout and click **Remove**. Or in Windows: **Settings → Apps → Installed apps → Uzbek Latin 2026 (…) → Uninstall**.
 
-**Mac:** in **System Settings → Keyboard → Text Input → Edit…**, select the layout and click **−**. Then in Finder choose **Go → Go to Folder…**, enter `/Library/Keyboard Layouts` and move **Uzbek Latin 2026.bundle** to the **Trash**. Log out and back in.
+**Mac:** open the app again, pick the layout and click **Remove**. The app opens System Settings and shows what to click there, because macOS only lets you take layouts like these out in System Settings. Once the last Uzbek layout is out, the app also deletes its files.
 
 ### Requirements
 
@@ -157,7 +157,7 @@ You can install more than one layout and switch between them with <kbd>Win</kbd>
 
 **Mac:**
 
-- macOS 11 or later (tested on macOS 26).
+- macOS 13 (Ventura) or later (tested on macOS 26).
 - Any Mac with an Intel or Apple silicon (M1 or later) processor.
 - Nothing else to install.
 
@@ -179,20 +179,19 @@ To change a layout, edit its `.klc` file in MSKLC, use **Project → Validate La
 
 ### Mac
 
-You need a Mac with Xcode or the Command Line Tools (`xcode-select --install`).
+You need a Mac with Xcode.
 
-Run `./build-mac-installer.sh`. It tests the layout rules, generates the Mac layouts from the three `.klc` files and builds `dist/UzbekKeyboardSetup.pkg`. Each Mac layout is Apple's U.S. layout with the `.klc`'s keys on top, so there is no separate Mac file to edit: after changing a `.klc`, run the script again. After installing the package and logging out and back in, `swift run --package-path mac keylayouts verify` checks every key of the installed layouts against the `.klc` files.
+Run `./build-mac-installer.sh`. It tests the layout rules, generates the Mac layouts and their pictures from the three `.klc` files, builds the setup app for Intel and Apple silicon, and zips it as `dist/UzbekKeyboardSetup.zip`. Each Mac layout is Apple's U.S. layout with the `.klc`'s keys on top, so there is no separate Mac file to edit: after changing a `.klc`, run the script again. After installing a layout with the app, `swift run --package-path mac keylayouts verify` checks every key of the installed layouts against the `.klc` files.
 
-Attach both `UzbekKeyboardSetup.exe` and `UzbekKeyboardSetup.pkg` to every release, so both download links keep working.
+Attach both `UzbekKeyboardSetup.exe` and `UzbekKeyboardSetup.zip` to every release, so both download links keep working.
 
 | Path | What it is |
 |---|---|
 | `Uzbek-Latin-2026-Classic.klc`<br>`Uzbek-Latin-2026-Direct.klc`<br>`Uzbek-Latin-2026-Turkish-style.klc` | The three layouts, in MSKLC's source format (UTF-16) |
 | `installer/` | The setup program (C#, Windows Forms, .NET Framework 4.8) |
 | `build-installer.ps1` | Packs the MSKLC packages into the setup program and builds it |
-| `mac/` | Generates the Mac layouts from the `.klc` files (Swift); `swift test --package-path mac` runs its tests |
-| `mac/installer/` | The Mac installer's settings and its welcome and closing pages |
-| `build-mac-installer.sh` | Builds the Mac installer |
+| `mac/` | The Mac side (Swift): generates the layouts and their pictures from the `.klc` files, and the setup app (`mac/Sources/UzbekKeyboardSetup`); `swift test --package-path mac` runs its tests |
+| `build-mac-installer.sh` | Builds the Mac setup app and zips it |
 | `docs/images/` | The pictures in this README. Regenerate them with `installer\bin\Release\net48\UzbekKeyboardSetup.exe --render-images docs\images`, or without Windows by running the *Render images* workflow in the Actions tab |
 | `.github/workflows/render-images.yml` | That workflow: renders the pictures on a GitHub Windows machine and commits them |
 

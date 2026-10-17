@@ -2,9 +2,15 @@ import AppKit
 
 /// The menu-bar icon of every layout: white "UZ" on the setup program's teal (#0A7C99),
 /// which reads on both light and dark menu bars.
-enum Icon {
-    /// The icon as .icns, in the sizes the menu bar and System Settings use.
-    static func icns() throws -> Data {
+public enum Icon {
+    /// iconset file names and pixel sizes: the menu bar and System Settings use the small ones.
+    public static let menuBarSizes = [("icon_16x16.png", 16), ("icon_16x16@2x.png", 32), ("icon_32x32.png", 32), ("icon_32x32@2x.png", 64)]
+    /// What Finder and the Dock use for the setup app.
+    public static let appSizes = menuBarSizes + [("icon_128x128.png", 128), ("icon_128x128@2x.png", 256), ("icon_256x256.png", 256),
+                                          ("icon_256x256@2x.png", 512), ("icon_512x512.png", 512), ("icon_512x512@2x.png", 1024)]
+
+    /// The icon as .icns, in the given iconset sizes.
+    public static func icns(sizes: [(String, Int)] = menuBarSizes) throws -> Data {
         let fileManager = FileManager.default
         let iconset = fileManager.temporaryDirectory.appendingPathComponent("UZ-\(UUID().uuidString).iconset")
         let icns = iconset.deletingPathExtension().appendingPathExtension("icns")
@@ -13,7 +19,7 @@ enum Icon {
             try? fileManager.removeItem(at: icns)
         }
         try fileManager.createDirectory(at: iconset, withIntermediateDirectories: true)
-        for (file, pixels) in [("icon_16x16.png", 16), ("icon_16x16@2x.png", 32), ("icon_32x32.png", 32), ("icon_32x32@2x.png", 64)] {
+        for (file, pixels) in sizes {
             try png(pixels: pixels).write(to: iconset.appendingPathComponent(file))
         }
         let iconutil = Process()

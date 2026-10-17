@@ -22,6 +22,11 @@ struct SystemLayout {
         data = Unmanaged<CFData>.fromOpaque(pointer).takeUnretainedValue()
     }
 
+    /// Runs Text Input Source calls one at a time (see `textInputSources`).
+    static func withTextInputSources<T>(_ body: () throws -> T) rethrows -> T {
+        try textInputSources.withLock(body)
+    }
+
     /// The installed or enabled input sources with this ID.
     static func sources(id: String) -> [TISInputSource] {
         let filter = [kTISPropertyInputSourceID as String: id] as CFDictionary
