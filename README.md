@@ -1,8 +1,8 @@
 # Uzbek Latin 2026 Keyboard
 
-Windows va Mac uchun oʻzbek lotin 2026 klaviaturalari · Uzbek Latin 2026 keyboard layouts for Windows and Mac
+Windows, Mac va Linux uchun oʻzbek lotin 2026 klaviaturalari · Uzbek Latin 2026 keyboard layouts for Windows, Mac and Linux
 
-**Yuklab olish / Download:** Windows: **[UzbekKeyboardSetup.exe](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.exe)** · Mac: **[UzbekKeyboardSetup.zip](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.zip)**
+**Yuklab olish / Download:** Windows: **[UzbekKeyboardSetup.exe](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.exe)** · Mac: **[UzbekKeyboardSetup.zip](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardSetup.zip)** · Linux: **[UzbekKeyboardLinux.tar.gz](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardLinux.tar.gz)**
 
 [Oʻzbekcha](#uzbek) · [English](#english)
 
@@ -12,7 +12,7 @@ Windows va Mac uchun oʻzbek lotin 2026 klaviaturalari · Uzbek Latin 2026 keybo
 
 ## Oʻzbekcha
 
-Bu loyihada Windows va Mac uchun uchta klaviatura hamda ularni oʻrnatadigan dasturlar bor. Uchalasi ham 2026-yilgi oʻzbek lotin alifbosidagi **ö, ş, ğ, ç** harflarini hamda **ʼ** (tutuq belgisi) va **ʻ** belgilarini yozadi. Farqi faqat shu harflar qaysi tugmalarda turganida.
+Bu loyihada Windows, Mac va Linux uchun uchta klaviatura hamda ularni oʻrnatadigan dasturlar bor. Uchalasi ham 2026-yilgi oʻzbek lotin alifbosidagi **ö, ş, ğ, ç** harflarini hamda **ʼ** (tutuq belgisi) va **ʻ** belgilarini yozadi. Farqi faqat shu harflar qaysi tugmalarda turganida.
 
 ### Uchta klaviatura
 
@@ -94,11 +94,22 @@ Bir nechta klaviaturani oʻrnatib, ular orasida <kbd>Win</kbd>+<kbd>Space</kbd> 
 
 Klaviatura faqat sizning foydalanuvchi hisobingizga oʻrnatiladi. Macdagi boshqa hisoblar uchun dasturni oʻsha hisobda ham oching.
 
+#### Linux
+
+1. **[UzbekKeyboardLinux.tar.gz](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardLinux.tar.gz)** faylini yuklab oling.
+2. Terminalda fayl turgan papkada `tar xzf UzbekKeyboardLinux.tar.gz` ni, keyin `./UzbekKeyboardLinux/install.sh` ni ishga tushiring. sudo kerak emas.
+3. Qaysi klaviatura yoqilishini raqami bilan tanlang. Uchalasi ham oʻrnatiladi, GNOMEda esa tanlangani kiritish manbalariga oʻzi qoʻshiladi.
+4. Tizimdan chiqib, qayta kiring. KDE Plasma va boshqa ish stollarida klaviaturani sozlamalarda qoʻshing: u **Uzbek Latin 2026 (…)** deb ataladi.
+
+Tugmalar Windowsdagidek: <kbd>AltGr</kbd> — oʻngdagi <kbd>Alt</kbd>. Klaviaturalar faqat Wayland seansida ishlaydi (Ubuntu va Fedorada odatiy seans shu). X11 seansida ular koʻrinmaydi: kirish oynasida Wayland seansini tanlang. Klaviatura faqat sizning foydalanuvchi hisobingizga oʻrnatiladi.
+
 ### Oʻchirish
 
 **Windows:** oʻrnatish dasturini qayta oching, klaviaturani tanlang va **Oʻchirish** ni bosing. Yoki Windowsda: **Sozlamalar → Ilovalar → Oʻrnatilgan ilovalar → Uzbek Latin 2026 (…) → Oʻchirish**.
 
 **Mac:** dasturni qayta oching, klaviaturani tanlang va **Oʻchirish** ni bosing. Dastur System Settings ni ochib, nimani bosish kerakligini koʻrsatadi: macOS bunday klaviaturalarni faqat u yerda olib tashlashga ruxsat beradi. Oxirgi oʻzbek klaviaturasi olib tashlangach, dastur fayllarni ham oʻchiradi.
+
+**Linux:** `./UzbekKeyboardLinux/install.sh --remove` ni ishga tushiring, keyin tizimdan chiqib, qayta kiring. Uchala klaviatura ham olib tashlanadi.
 
 ### Talablar
 
@@ -114,11 +125,16 @@ Klaviatura faqat sizning foydalanuvchi hisobingizga oʻrnatiladi. Macdagi boshqa
 - Intel yoki Apple silicon (M1 va yangiroq) protsessorli istalgan Mac.
 - Boshqa hech narsa oʻrnatish shart emas.
 
+**Linux:**
+
+- Wayland seansi: GNOME, KDE Plasma va boshqalar. Ubuntu 22.04, Ubuntu 24.04 va Fedorada tekshirilgan. X11 seanslarida ishlamaydi.
+- Boshqa hech narsa oʻrnatish shart emas.
+
 <a id="english"></a>
 
 ## English
 
-This project has three keyboard layouts for Windows and Mac, and an installer for each system. All three type the Uzbek Latin 2026 letters **ö, ş, ğ, ç** and the **ʼ** (tutuq belgisi) and **ʻ** signs. They differ only in which keys those letters are on.
+This project has three keyboard layouts for Windows, Mac and Linux, and an installer for each system. All three type the Uzbek Latin 2026 letters **ö, ş, ğ, ç** and the **ʼ** (tutuq belgisi) and **ʻ** signs. They differ only in which keys those letters are on.
 
 ![Setup window in English](docs/images/installer-en.png)
 
@@ -159,11 +175,22 @@ You can install more than one layout and switch between them with <kbd>Win</kbd>
 
 The layout is installed for your user account only. For another account on the same Mac, open the app in that account too.
 
+#### Linux
+
+1. Download **[UzbekKeyboardLinux.tar.gz](https://github.com/discoveruz/uzbek-keyboard-layout/releases/latest/download/UzbekKeyboardLinux.tar.gz)**.
+2. In a terminal, in the folder with the file, run `tar xzf UzbekKeyboardLinux.tar.gz`, then `./UzbekKeyboardLinux/install.sh`. It doesn't need sudo.
+3. Pick the layout to turn on by its number. All three are installed, and on GNOME the one you picked is added to your input sources.
+4. Log out and back in. On KDE Plasma and other desktops, add the layout in your keyboard settings; it's called **Uzbek Latin 2026 (…)**.
+
+The keys are the same as on Windows: <kbd>AltGr</kbd> is the right <kbd>Alt</kbd>. The layouts only work in a Wayland session (the usual one on Ubuntu and Fedora). In an X11 session they don't show up; pick a Wayland session on the login screen. The layouts are installed for your user account only.
+
 ### How to remove
 
 **Windows:** open the setup program again, pick the layout and click **Remove**. Or in Windows: **Settings → Apps → Installed apps → Uzbek Latin 2026 (…) → Uninstall**.
 
 **Mac:** open the app again, pick the layout and click **Remove**. The app opens System Settings and shows what to click there, because macOS only lets you take layouts like these out in System Settings. Once the last Uzbek layout is out, the app also deletes its files.
+
+**Linux:** run `./UzbekKeyboardLinux/install.sh --remove`, then log out and back in. It takes out all three layouts.
 
 ### Requirements
 
@@ -177,6 +204,11 @@ The layout is installed for your user account only. For another account on the s
 
 - macOS 13 (Ventura) or later (tested on macOS 26).
 - Any Mac with an Intel or Apple silicon (M1 or later) processor.
+- Nothing else to install.
+
+**Linux:**
+
+- A Wayland session: GNOME, KDE Plasma and others. Checked on Ubuntu 22.04, Ubuntu 24.04 and Fedora. X11 sessions aren't supported.
 - Nothing else to install.
 
 ## Build from source
@@ -211,7 +243,7 @@ Run `./build-linux-package.sh`. It tests the layout rules, generates the Linux l
 
 `linux/check.sh` tests the package in Docker on Ubuntu 22.04, Ubuntu 24.04 and the latest Fedora. In each, it installs the layouts for a test user and uses libxkbcommon, the library these desktops build keyboards with, to check every key with every mix of <kbd>Shift</kbd>, <kbd>Caps Lock</kbd>, <kbd>AltGr</kbd> and <kbd>Ctrl</kbd> against the `.klc` files. On a Linux PC, after `install.sh`, run `python3 linux/xkblayouts.py verify` from the repo root for the same check.
 
-Attach both `UzbekKeyboardSetup.exe` and `UzbekKeyboardSetup.zip` to every release, so both download links keep working.
+Attach `UzbekKeyboardSetup.exe`, `UzbekKeyboardSetup.zip` and `UzbekKeyboardLinux.tar.gz` to every release, so all three download links keep working.
 
 | Path | What it is |
 |---|---|
